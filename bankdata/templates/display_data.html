@@ -1,0 +1,33 @@
+<!-- bankdata/templates/display_data.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Data</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-5">
+    <h2>Data Display</h2>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Bank Name</th>
+                <th>Date</th>
+                <th>Booking/Refund</th>
+                <th>Extracted Data</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for entry in data %}
+            <tr>
+                <td>{{ entry.bank_name }}</td>
+                <td>{{ entry.date }}</td>
+                <td>{{ entry.booking_or_refund }}</td>
+                <td>{{ entry.extracted_data }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
